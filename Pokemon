@@ -1,0 +1,60 @@
+Pokemon
+
+ej1: 
+pokemon> db.samples_pokemon.find({"num":"132"});
+
+ej2: 
+pokemon>db.samples_pokemon.find({"type":"Poison"});
+
+ej3: 
+pokemon> db.samples_pokemon.find({"avg_spawns":4.2});
+
+ej4:
+pokemon> db.samples_pokemon.find({ "candy_count": { "$gte": 20, "$lte": 40 } })
+
+ej5:
+pokemon> db.samples_pokemon.find({ "spawn_chance": { "$gt": 0.088 } })
+
+ej6:
+pokemon> db.samples_pokemon.find().sort({ "weight": -1 }).limit(10)
+
+ej7:
+pokemon> db.samples_pokemon.find({ "next_evolution.num": "003" })
+
+ej8:
+pokemon> db.samples_pokemon.find({ "candy_count": { "$gte": 25 }, "avg_spawns": { "$gt": 5 }})
+
+ej9:
+pokemon> db.samples_pokemon.find({"weaknesses":"Ground", "multipliers":null});
+
+ej10:
+pokemon> db.samples_pokemon.find().sort({"avg_spawns":-1});
+
+ej11:
+pokemon> db.samples_pokemon.find({ "candy_count": { "$lt": 100 } }).sort({ "candy_count": -1 })
+
+ej12:
+pokemon> db.samples_pokemon.find({"egg":"Not in Eggs"})
+
+ej13:
+pokemon> db.samples_pokemon.find({"$or":[{"multipliers":null},{"candy_count":{"$gte":100}}]})
+
+ej14:
+pokemon> db.samples_pokemon.find({"candy_count":{"$gt":25}, "spawn_time":{"$lt":"15:00"}, "avg_spawns":{"$gt":40}})
+
+ej15:
+pokemon> db.samples_pokemon.find({"candy_count":{"$gt":50}}).limit(3)
+
+ej16:
+pokemon> db.samples_pokemon.find({"type":"Ground", "weaknesses":{"$ne":"Grass"}})
+
+ej17:
+pokemon> db.samples_pokemon.find().sort({"candy_count": -1})
+
+ej18:
+pokemon> db.samples_pokemon.find().sort({"spawn_chance": 1});
+
+ej19:
+pokemon> db.samples_pokemon.find({"name":"Pikachu"});
+
+

@@ -1,0 +1,25 @@
+Friends
+
+ej1:
+test> db.samples_friends.find({ season: 1 })
+
+ej2:
+test> db.samples_friends.find({ airtime: "20:00" })
+
+ej3:
+test> db.samples_friends.find({ name: /w/i })
+
+ej4:
+test> db.samples_friends.findOne({"season":2});
+
+ej5:
+test> db.samples_friends.find({"season":1}).limit(5);
+
+ej6:
+test> db.samples_friends.find({ name: /^The One/i });
+
+ej7:
+test> db.samples_friends.find({ name: /Chandler/i });
+
+ej8:
+test> db.samples_friends.find({ season: 3, name: /Ross/ });
