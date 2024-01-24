@@ -22,4 +22,4 @@ ej7:
 test> db.samples_friends.find({ name: /Chandler/i });
 
 ej8:
-test> db.samples_friends.find({ season: 3, name: /Ross/ });
+test> db.samples_friends.find({ $and: [{ season: 3 }, { summary: /Ross/i }] });
